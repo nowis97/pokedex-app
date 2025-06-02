@@ -1,0 +1,31 @@
+@use "../../styles/colors";
+
+.c-button {
+  background-color: colors.$text-color;
+  border: 1px solid colors.$primary-color;
+  height: 2rem;
+  width: 6rem;
+  border-radius: 1rem;
+  color: black;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.c-pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+}
+
+.text {
+  margin: 0;
+  font-size: 1rem;
+  margin: {
+    left: 0.5rem;
+    right: 0.5rem;
+  };
+}

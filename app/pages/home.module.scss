@@ -1,0 +1,13 @@
+.c-grid {
+  display: grid;
+  gap: 1rem;
+  grid-auto-rows: 22rems;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  padding: {
+    left: 4rem;
+    right: 4rem;
+  };
+
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
