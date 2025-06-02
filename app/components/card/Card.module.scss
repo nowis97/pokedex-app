@@ -5,17 +5,24 @@
   flex-direction: column;
   align-items: center;
   background-color: colors.$text_color;
+  border-radius: 1rem;
+  padding: 1rem;
+  transition: border-color 0.3s ease;
+  border-color: colors.$text-color;
+
 
   &:hover {
     cursor: pointer;
+    border: 2px solid colors.$primary-color;
   }
 
-  &__image {
-    height: 6rem;
+  .image {
+    height: 12rem;
     object-fit: contain;
+    object-position: center;
   }
 
-  &__title {
-    font-size: 4rem;
+  .title {
+    font-size: 1rem;
   }
 }
