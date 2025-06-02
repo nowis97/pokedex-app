@@ -1,0 +1,17 @@
+@use "../../styles/colors";
+
+.c-top-bar {
+  height: 5rem;
+  display: flex;
+  align-items: flex-end;
+  padding: {
+    left: 4rem;
+    right: 4rem;
+  };
+  background-color: colors.$primary-color;
+  color: colors.$text-color;
+
+  @media (width <= 768px) {
+    margin: 0;
+  }
+}
