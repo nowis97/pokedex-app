@@ -9,6 +9,8 @@
   padding: 1rem;
   transition: border-color 0.3s ease;
   border-color: colors.$text-color;
+  max-width: 25rem;
+  justify-content: center;
 
 
   &:hover {
@@ -24,5 +26,6 @@
 
   .title {
     font-size: 1rem;
+    text-transform: capitalize;
   }
 }

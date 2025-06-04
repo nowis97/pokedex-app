@@ -1,0 +1,21 @@
+@use "../../styles/colors";
+
+.search-input {
+  border: none;
+  outline: none;
+  margin-left: 5px;
+  width: 100%;
+}
+
+.c-container-search {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  border-radius: 10px;
+  padding: 0.4rem;
+  border: 1px solid #112111;
+  &:focus-within {
+    border: 1.5px solid colors.$primary-color;
+  }
+}

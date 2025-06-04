@@ -4,7 +4,7 @@
   background-color: colors.$text-color;
   border: 1px solid colors.$primary-color;
   height: 2rem;
-  width: 6rem;
+  width: 7rem;
   border-radius: 1rem;
   color: black;
 
@@ -19,13 +19,17 @@
   justify-content: center;
   align-items: center;
   height: 3rem;
+  padding: {
+    left: 4rem;
+    right: 4rem;
+  };
 }
 
 .text {
   margin: 0;
   font-size: 1rem;
   margin: {
-    left: 0.5rem;
-    right: 0.5rem;
+    left: 0.7rem;
+    right: 0.7rem;
   };
 }
