@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import type {Pokemon, PokemonListDTO} from "~/types/pokemon.dto";
+import type {PokemonDetails} from "~/types/pokemon-details.dto";
 
 const usePokemons = (offset: number, limit: number) => {
     const [pokemonsResponse, setPokemonsResponse] = useState<PokemonListDTO | null>(null);
@@ -43,4 +44,21 @@ const usePokemonsSearch = (searchText: string) => {
     return {pokemonList, loading, error};
 }
 
-export { usePokemons, usePokemonsSearch };
+const usePokemon = (idOrName: string) => {
+    const [pokemon, setPokemon] = useState<PokemonDetails | null>(null);
+    const [loading, setLoading] = useState<boolean>();
+    const [error, setError] = useState<Error>();
+
+    useEffect(() => {
+        setLoading(true);
+        fetch(import.meta.env.VITE_API_URL_POKEDEX + '/pokemon/' + idOrName)
+            .then(response => response.json())
+            .then(data => setPokemon(data))
+            .catch(error => setError(error))
+            .finally(() => setLoading(false));
+    }, [idOrName])
+
+    return {pokemon, loading, error}
+}
+
+export { usePokemons, usePokemonsSearch, usePokemon};

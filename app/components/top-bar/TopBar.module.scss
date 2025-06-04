@@ -13,5 +13,9 @@
 
   @media (width <= 768px) {
     margin: 0;
+    padding: {
+      left: 2rem;
+      right: 2rem;
+    }
   }
 }

@@ -14,7 +14,7 @@ export default function SearchInput({value, onChange}: Props): JSX.Element {
     return (
         <search className={styles.cContainerSearch}>
             &#128270;
-            <input className={styles.searchInput} placeholder="Search Pokémon..." onChange={handleChange} value={value} />
+            <input className={styles.searchInput} placeholder="Buscar Pokémon..." onChange={handleChange} value={value} />
         </search>
 
     );
