@@ -4,7 +4,7 @@ import styles from "./PokemonDetailsPage.module.scss"
 
 export default function PokemonDetailsPage({params}: Route.ComponentProps) {
     const {id_or_name} = params as { id_or_name: string };
-    const {pokemon, loading, error} = usePokemon(id_or_name);
+    const {pokemon} = usePokemon(id_or_name);
 
 
     return (
@@ -17,11 +17,11 @@ export default function PokemonDetailsPage({params}: Route.ComponentProps) {
                          src={pokemon?.sprites.other["official-artwork"].front_default}/>
                     <section className={styles.cSpritesBackFront}>
                         <section className={styles.cSprite}>
-                            <img className={styles.imageSprite} src={pokemon?.sprites.other.showdown.front_default}/>
+                            <img alt="Front sprite" className={styles.imageSprite} src={pokemon?.sprites.other.showdown.front_default}/>
                             <p>Frente</p>
                         </section>
                         <section className={styles.cSprite}>
-                            <img className={styles.imageSprite} src={pokemon?.sprites.other.showdown.back_default}/>
+                            <img alt="Back sprite" className={styles.imageSprite} src={pokemon?.sprites.other.showdown.back_default}/>
                             <p>Atrás</p>
                         </section>
                     </section>
